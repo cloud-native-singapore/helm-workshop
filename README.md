@@ -4,6 +4,9 @@ This repository contains the guidelines for a Workshop on writing Helm Charts.
 
 This is meant to be a follow up on the [Kubernetes Workshop](https://github.com/cloud-native-singapore/kubernetes-workshop)
 
+Slides are [available on google slides](https://docs.google.com/presentation/d/1GM6L8XWEHzeI4QUaJ0k7pJSgXcRS9UugPTSO64Mgp4A/edit?usp=sharing)
+
+
 ## Demo Script
 
 ### Refresher

@@ -320,5 +320,5 @@ Just to highlight a few:
 For more details on Chart writing:
 
 - [Introduction to Charts](docs/01_INTRODUCTION.md)
-- [Writing Charts][docs/02_WRITING_CHARTS.md)
-- [Installing Charts][docs/04_INSTALLING_CHARTS.md)
+- [Writing Charts](docs/02_WRITING_CHARTS.md)
+- [Installing Charts](docs/04_INSTALLING_CHARTS.md)

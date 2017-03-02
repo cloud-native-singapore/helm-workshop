@@ -1,0 +1,11 @@
+name: inspector
+version: 0.0.1
+description: Chart to demonstrate advanced templating features
+keywords:
+- kelsey
+sources:
+- https://github.com/kelseyhightower/inspector
+maintainers:
+- name: Vincent De Smet
+  email: vincent.drl@gmail.com
+engine: gotpl

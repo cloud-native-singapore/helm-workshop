@@ -1,0 +1,15 @@
+{{ .Chart.Name }} installed!
+
+Release is named {{ .Release.Name }}.
+
+To learn more about the release, try:
+
+  $ helm status {{ .Release.Name }}
+  $ helm get {{ .Release.Name }}
+
+Inspector is deployed internally to the cluster.
+Service Name: {{ template "fullname" . }}
+
+Verify cluster status using `kubectl proxy &`
+
+open http://localhost:8001/api/v1/proxy/namespaces/{{ .Release.Namespace }}/services/{{ template "fullname" . }}:80/

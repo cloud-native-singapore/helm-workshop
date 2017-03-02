@@ -1,0 +1,8 @@
+name: inspector
+image:
+  repository: so0k/kuar-inspector
+  tag: 1.0.0
+config:
+  kelsey-rating: "pretty dope"
+  env: gcpug
+  asset-pipeline: false

@@ -11,6 +11,21 @@ This chart does not follow Helm Best Practices for the sake of simplicity.
 helm install .
 ```
 
+## Directory Sructure:
+
+```
+code/simple-nginx/
+├── Chart.yaml             Chart specs
+├── README.md              This README
+├── html                   HTML files for ConfigMap
+│   └── index.html
+├── templates              Kubernetes Manifests
+│   ├── nginx-cm.yaml
+│   ├── nginx-deploy.yaml
+│   └── nginx-svc.yaml
+└── values.yaml            A default Values file
+```
+
 ## Purpose
 
 Show templating features of helm:
@@ -30,18 +45,3 @@ Show templating features of helm:
    data:
    {{ (.Files.Glob "html/*").AsConfig | indent 2 }}
    ```
-
-## Directory Sructure:
-
-```
-code/simple-nginx/
-├── Chart.yaml             Chart specs
-├── README.md              This README
-├── html                   HTML files for ConfigMap
-│   └── index.html
-├── templates              Kubernetes Manifests
-│   ├── nginx-cm.yaml
-│   ├── nginx-deploy.yaml
-│   └── nginx-svc.yaml
-└── values.yaml            A default Values file
-```

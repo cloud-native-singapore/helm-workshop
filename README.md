@@ -2,7 +2,7 @@
 
 This repository contains the guidelines for a Workshop on writing Helm Charts.
 
-This is meant to be a follow up on [Kubernetes Workshop](https://github.com/cloud-native-singapore/kubernetes-workshop)
+This is meant to be a follow up on the [Kubernetes Workshop](https://github.com/cloud-native-singapore/kubernetes-workshop)
 
 ## Demo Script
 
@@ -142,11 +142,26 @@ $ helm delete simple-nginx-1-10
 > simple-nginx-1-10 1          Thu Mar  2 14:21:44 2017   DELETED simple-nginx-0.0.1
 > ```
 
-In this simple chart, we can modify the [html](code/simple-nginx/html/)
+In this simple chart we have:
 
-Currently only 1 parameter is provided and the default value is documented in the [values.yaml](code/simple-nginx/values.yaml) file at the root of the directory.
+- A `Chart.yaml` at the root
 
-We can demonstrate these changes:
+  This provides information about the chart which can be used for searching.
+
+- A folder full of `templates`
+
+  Which are based on golang templates with 50+ addon functions to render based
+  user provided on values
+
+- A `values.yaml` file to provide values for the templates
+
+  Currently only 1 parameter is provided and the default value is documented
+  in the [values.yaml](code/simple-nginx/values.yaml) file at the root of the directory.
+
+This chart also demonstrate the ability to include files allowing us to
+modify the [html ConfigMap](code/simple-nginx/html/) for illustration purposes.
+
+We can demonstrate these changes as follows:
 ```
 vim code/simple-nginx/html/index.html
 helm install -n simple-nginx-1-11 --set tag=1.11-alpine code/simple-nginx/
@@ -154,8 +169,8 @@ helm install -n simple-nginx-1-11 --set tag=1.11-alpine code/simple-nginx/
 
 ### Advanced Templating and User Notes
 
-If we try to install the simple-nginx chart multiple times, we will get errors due to name
-conflicts between the resources.
+With the current state of the chart, if we try to install the simple-nginx chart multiple times,
+we will get errors due to name conflicts between the Kubernetes resources.
 
 We can use the Templating features to template out the names as follows:
 
@@ -236,7 +251,7 @@ env:
 - name: KELSEY_RATING
   value: "pretty dope"
 ```
-> *Note*: not only iteration, but also if/else/.. statements are supported
+> *Note*: not only looping, but also conditionals and nesting is supported
 
 The final result is a very powerfull and easy to install Chart:
 ```bash

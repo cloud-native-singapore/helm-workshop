@@ -1,4 +1,4 @@
-# Helm chart for Kelsey Hightower Inspector
+# Helm chart for Kelsey Hightower's Inspector
 
 This helm chart tries to show of the powerfull configuration features `values.yaml` provides to Helm Charts.
 
@@ -14,6 +14,19 @@ helm install -n inspector-v1 .
 kubectl get po
 kubectl port-forward <pod> 8080:80
 open http://localhost:8080
+```
+
+## Directory Sructure:
+
+```
+code/inspector/
+├── Chart.yaml
+├── README.md
+├── templates
+│   ├── _helpers.tpl
+│   ├── deploy.yaml
+│   └── svc.yaml
+└── values.yaml
 ```
 
 ## Purpose
@@ -47,17 +60,3 @@ Show templating features of helm:
      value: {{ $value | quote }}
    {{- end }}
    ```
-
-## Directory Sructure:
-
-```
-code/inspector/
-├── Chart.yaml
-├── README.md
-├── templates
-│   ├── _helpers.tpl
-│   ├── deploy.yaml
-│   ├── ingress.yaml
-│   └── svc.yaml
-└── values.yaml
-```

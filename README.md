@@ -154,7 +154,7 @@ In this simple chart we have:
 - A folder full of `templates`
 
   Which are based on golang templates with 50+ addon functions to render based
-  user provided on values
+  on user provided values
 
 - A `values.yaml` file to provide values for the templates
 

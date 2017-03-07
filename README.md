@@ -1,5 +1,7 @@
 # Cloud Native Singapore - Helm workshop
 
+[![Join the singapore channel](https://img.shields.io/badge/slack-ready-green.svg)](https://slack.cncf.io)
+
 This repository contains the guidelines for a Workshop on writing Helm Charts.
 
 This is meant to be a follow up on the [Kubernetes Workshop](https://github.com/cloud-native-singapore/kubernetes-workshop)
@@ -98,12 +100,12 @@ The first thing we may want to do is provide the ability to template parts of th
 
 
 For example to:
-- Change the tag for the image during resource and deploy different versions using the same manifest files. Or, ...
+- Change the tag for the image of a podSpec and deploy different versions using the same manifest files. Or, ...
 - Modify the contents of the ConfigMap without having to worry about wrapping it in
   yaml...
 
 [Helm](https://github.com/kubernetes/helm) comes with a very powerfull templating
-engine (which is just one of it's features).
+engine (which is just one of its features).
 
 First, follow the [Helm Installation Guide](https://github.com/kubernetes/helm/blob/master/docs/install.md)
 

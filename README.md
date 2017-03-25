@@ -1,6 +1,7 @@
 # Cloud Native Singapore - Helm workshop
 
-[![Join the singapore channel](https://img.shields.io/badge/slack-ready-green.svg)](https://slack.cncf.io)
+[![Join Cloud-Native Slack team](https://slack.cncf.io/badge.svg)](https://slack.cncf.io)
+- [#singapore](https://cloud-native.slack.com/messages/singapore/) channel
 
 This repository contains the guidelines for a Workshop on writing Helm Charts.
 

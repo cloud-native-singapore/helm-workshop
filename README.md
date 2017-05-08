@@ -105,6 +105,8 @@ For example to:
 - Modify the contents of the ConfigMap without having to worry about wrapping it in
   yaml...
 
+Read Also: [Use cases in Templating proposal](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/templates.md)
+
 [Helm](https://github.com/kubernetes/helm) comes with a very powerfull templating
 engine (which is just one of its features).
 
